@@ -20,8 +20,8 @@ public class OrderItem {
 
     public double getSubtotal() {
         if (menuItem == null) {
-            return 0;
+            return 0.0;
         }
-        return (double) menuItem.getPrice() * quantity;
+        return menuItem.getPrice() * quantity;
     }
 }

@@ -16,10 +16,6 @@ public class Order {
         return customer;
     }
 
-    public OrderItem[] getItems() {
-        return items;
-    }
-
     public void addItem(MenuItem menuItem, int quantity) {
         if (menuItem == null || quantity <= 0) {
             return;
@@ -35,7 +31,7 @@ public class Order {
     }
 
     public double getTotal() {
-        double total = 0;
+        double total = 0.0;
         for (int i = 0; i < itemCount; i++) {
             if (items[i] != null) {
                 total += items[i].getSubtotal();
@@ -46,7 +42,7 @@ public class Order {
 
     public double getFinalTotal() {
         double total = getTotal();
-        if (total >= 100000) {
+        if (total >= 100000.0) {
             return total * 0.9;
         }
         return total;
