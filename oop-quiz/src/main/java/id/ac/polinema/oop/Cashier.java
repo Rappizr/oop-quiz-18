@@ -6,6 +6,7 @@ public class Cashier {
         if (order == null) {
             return cash;
         }
+        
         return cash - order.getFinalTotal();
     }
 }
